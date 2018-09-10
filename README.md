@@ -7,3 +7,5 @@ some smart contract demos for  audit lectures.
 - 02-重入漏洞
     - [0201_reentrancy.sol](02/0201_reentrancy.sol)
     - [0202_reentrancy_attack.sol](02/0202_reentrancy_attack.sol)
+- 03-访问控制
+    - [0301_accessgame.sol](03/0301_access_game.sol)
