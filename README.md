@@ -2,8 +2,8 @@
 some smart contract demos for  audit lectures.
 
 - 01-智能合约入门
-    - [0101_hellogame.sol](01/hellogame_01_1.sol)
-    - [0102_erc20.sol](01/erc20_01_2.sol)
+    - [0101_hellogame.sol](01/0101_hellogame.sol)
+    - [0102_erc20.sol](01/0102_erc20.sol)
 - 02-重入漏洞
     - [0201_reentrancy.sol](02/0201_reentrancy.sol)
     - [0202_reentrancy_attack.sol](02/0202_reentrancy_attack.sol)
@@ -21,3 +21,8 @@ some smart contract demos for  audit lectures.
     - [0604_dos.sol](06/0604_dos.sol)
 - 07-随机误用
     - [0701_badrandom.sol](07/0701_badrandom.sol)
+- 08-条件竞争
+    - [0801_erc20.sol](08/0801_erc20.sol)
+- 09-时间操纵
+    - [0901_timegame1.sol](09/0901_timegame1.sol)
+    - [0902_timegame2.sol](09/0902_timegame2.sol)
