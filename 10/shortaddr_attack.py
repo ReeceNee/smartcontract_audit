@@ -5,7 +5,7 @@ import json
 from solc import compile_source
 
 # target short address
-target_addr = "0xA809C5a08E9358A3e1dbbE53e89cf3Dca5f41400"
+target_addr = "0x641b32fe9BC20934b4999B280c29Cb92dfb6f800"
 
 
 class ShortAddrAttack:
@@ -97,7 +97,7 @@ class ShortAddrAttack:
 if __name__ == "__main__":
     http_provider_api = "https://ropsten.infura.io/v3/a209e17cf92440ccab50d2a98efe83f8"
     priv_key = "7cd2e3bcaaf9c465f5a1c85b59ac0fe9b2dc0169afa52d127df2b7e39365ba5f"
-    contract_addr = Web3().toChecksumAddress("0x9f5b72077c2de9d2b6c8248bcfc95d7d2a3886b3")
+    contract_addr = Web3().toChecksumAddress("0x30E81BCAecD60c5883645444F5b579c9175CF6ee")
     sol_path = "/home/reece/workspace/smartcontract/smartcontract_audit/10/1001_shortaddr.sol"
     contract_name = "<stdin>:ShortToken"
     slogan = "Short Addresses Attack Demo"

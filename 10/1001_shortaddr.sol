@@ -6,7 +6,7 @@ contract ShortToken {
     event Transfer(address indexed _from, address indexed _to, uint256 _value);
 
     constructor() {
-        balances[tx.origin] = 10000;
+        balances[tx.origin] = 10**20;
     }
 
     function transfer(address to, uint amount) returns(bool sufficient) {
