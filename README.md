@@ -26,3 +26,9 @@ some smart contract demos for  audit lectures.
 - 09-时间操纵
     - [0901_timegame1.sol](09/0901_timegame1.sol)
     - [0902_timegame2.sol](09/0902_timegame2.sol)
+- 10-短地址漏洞
+    - [1001_shortaddr.sol](10/1001_shortaddr.sol)
+    - [shortaddr_attack.py](10/shortaddr_attack.py)
+- 11-智能合约人工审计实战
+    - [1101_cover.sol](11/1101_cover.sol)
+    - [1102_logic.sol](11/1102_logic.sol)
