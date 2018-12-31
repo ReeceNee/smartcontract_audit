@@ -32,3 +32,5 @@ some smart contract demos for  audit lectures.
 - 11-智能合约人工审计实战
     - [1101_cover.sol](11/1101_cover.sol)
     - [1102_logic.sol](11/1102_logic.sol)
+- 12-智能合约测试工具
+    - [truffle-metacoin](12/truffle-metacoin/README.md)
