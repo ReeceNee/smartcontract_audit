@@ -34,3 +34,12 @@ some smart contract demos for  audit lectures.
     - [1102_logic.sol](11/1102_logic.sol)
 - 12-智能合约测试工具
     - [truffle-metacoin](12/truffle-metacoin/README.md)
+- 13-智能合约分析工具
+    - [1301_myth.sol](13/1301_myth.sol)
+    - [1302_slither.sol](13/1302_slither.sol)
+    - [1303_myth_1.sh](13/1303_myth_1.sh)
+    - [1304_myth_2.sh](13/1304_myth_2.sh)
+    - [1305_myth_3.sh](13/1305_myth_3.sh)
+    - [1306_slither_1.sh](13/1306_slither_1.sh)
+    - [1307_slither_2.sh](13/1307_slither_2.sh)
+    - [1308_slither_3.sh](13/1308_slither_3.sh)

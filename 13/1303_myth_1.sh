@@ -1,0 +1,1 @@
+sudo docker run -v $(pwd):/tmp mythril/myth -x /tmp/1301_myth.sol

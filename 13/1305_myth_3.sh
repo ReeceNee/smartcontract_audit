@@ -1,0 +1,1 @@
+sudo docker run -v $(pwd):/tmp mythril/myth --rpc infura-mainnet -g /tmp/cfg.html -xa 0x5c436ff914c458983414019195e0f4ecbef9e6dd

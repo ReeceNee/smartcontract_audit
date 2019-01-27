@@ -1,0 +1,1 @@
+slither 1302_slither.sol --print call-graph
